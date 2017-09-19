@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		var name = 'Bobby'
+		var footballTeams = ['Giants', 'RoughRiders', 
+		'Jets', name]; 
+		console.log('' + footballTeams[2]); 
+
+		// Changing first element in array to 'RedSkins'
+		footballTeams[0] = 'Redskins'; 
+		console.log('The 1st element in the array 								is now' + footballTeams[0]); 
+
+		console.log('The amount of elements in the array is'+ footballTeams.lenght); 
+
+		console.log(footballTeams. toString()); 
+		console.log(footballTeams.join(" - "))
+
+		//Pushign 'Cardinals' 
+		footballTeams.push('Cardinals');
+		console.log(footballTeams)
+		//Popping 
+		var removedElement = footballTeams.pop(); 
+		console.log(removedElement + 'was removed from the array'); 
+
+		// push element using prompt 
+		// var input = prompt(); 
+		// footballTeams.push(prompt()); 
+		console.log(footballTeams)
+
+		//add two new elements after the first element of array, and remove 2nd element of the array, and remove 2nd element of the array
+		footballteams.splice(1, 1, "Falcons, ", "")
+		
+		// var iphone = 															['6', '6 Plus' '6s','7', '7 Plus' '7s' 'X']; 
+		// var samsungs = 															['S6', 'S6 Edge', 'S7', 's7 Edge' 'S8'];
+		// console.log('iPhone' + iphones [6] + "is better than Samsung" + 		samsungs[1]);
+
+
+	</script>
+
+</body>
+</html>
