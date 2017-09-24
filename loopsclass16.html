@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<ul id="list"></ul>
+	<!-- //Unordered List --> 
+
+	<script type="text/javascript">
+		// var input = prompt(); 
+		/*
+		if(input < 13){
+			console.log('WooHoo');
+		}else{
+			console.log('BooHoo'); 
+		}
+
+		if(input % 2 == 0){
+			console.log(input + "is even");
+		}else{
+			console.log(input + "is odd");
+		}*/
+
+		//While Loop
+		// var i = 1; 
+		// while(i <= 100){
+		// 	console.log(i);
+		// 	//i = i + 1; 
+		// 	i++; 
+			//incrementing by numbers greater than 1
+			//i = i + 2; 
+			//i *= 2; 
+		// }
+
+		// var j = 100;
+		// while(j >= -20){
+		// 	console.log(j); 
+		// 	j-=3; 
+		// }
+
+		console.log('----------------------------------')
+
+		//For loops 
+		// for (var i = 1; i <= 100; i++){
+		// 		console.log(i);
+		// }
+
+		var fruits = ['apple', 'grape', 'bananas', 'mangos', 
+			'peaches', 'pineapples', 'pears']
+		for(var i = 0; i < fruits.length; i ++){
+			console.log(fruits[i]); 
+			var li = document.createElement('li'); 
+			li.innerHTML = fruits[i]; 
+			document.getElementById('list').appendChild(li); 
+		}
+		// var i = 0 
+		// while (i <=99){
+			
+		// 	if(i % 3 == 0){
+		// 		console.log(i);
+		// 	}
+		// 	i++
+		// }
+
+		//Do While Loop
+		// do{
+
+		// }
+
+		//For/in Loop
+		var planets = ['Mercury', 'Venue', 'Earth', 'Mars', 'Jupiter', 'X']
+		for (var i in ){
+			console.log(i + "i s the index and " + planets[i] + " is the element"); 
+		}
+
+	</script>
+</body>
+</html>
