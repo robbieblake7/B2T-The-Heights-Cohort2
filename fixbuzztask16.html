@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			var i = 1; 
+			//Create "while loop" so that you can set the parameters for "i" variable 
+			while(i <= 100){
+
+				//If i is divisible by 3 and 5 it will print "Fizz Buzz" to the console. It goes first because once those spots are taken the loop will not re-evaluate thos numbers
+				
+				if (i%3 == 0 && i%5 == 0){
+					console.log ("FizzBuzz"); 
+				}
+
+				//If it is divisible by 5, it will print "Buzz" to the console 
+				else if (i%3 == 0){
+					console.log("Fizz"); 
+				}
+				//Otherwise if the number does not fit any of these three conditions the console will print the number
+				else{
+					console.log(i)//i = i+1; 
+				}
+				i++
+				
+				}
+		</script>
+
+	</body>
+	</html>

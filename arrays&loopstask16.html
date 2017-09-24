@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var  colors = ["violet", "Green", "Red", "Orange", "Violet", "Indigio", "Yellow"]; 
+
+			var o = ["th", "st", "nd", "rd"];
+			//A loop of colors that iterates from index 0 to the end of the array 
+			for (var i = 0; i< colors.length; i++){
+
+
+
+			//this tells the array if the index is lessthan 3, iterate through the suffixes starting at the first index
+			if (i < 3){
+				var suffix = o[i + 1]
+			}
+			//This says if the first condition is not met then use the suffix at the 0 index position 
+			else {
+				var suffix = o[0]	
+			}
+			{
+				console.log((i +1 + suffix + " choice is ") + colors[i])
+			}
+			}
+				
+
+
+		</script>
+	</body>
+	</html>
