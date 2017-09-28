@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<p id="reading"></p>
+		<script type="text/javascript">
+			var library = [
+				{author: 'Bill Gates', title: 'The Road Aheads', readingStatus: true}, 
+				{author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true}, 
+				{author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger The Hunger Games', readingStatus: false}
+			];
+
+			var text = "";
+			for (var i = 0; i < library.length; i++) {
+				// In line 16 we are intilizing the first variable then creating a condition and incrementing the variable by one 
+				if(library[i].readingStatus == true){
+				// In line 18 we are going through the library array to check if readingStatus is equal to true and having it inserted to the text in line 20 
+					text += "Already Read "+library[i].title+" by "+library[i].author+"<br/>";
+				} else {
+				// In Line 22 here is the same until it equals to false 
+					text += "You still need to read "+library[i].title+" by "+library[i].author+"<br/>";
+				}
+			}
+
+			document.getElementById("reading").innerHTML = text;
+			//Inside the library Array there contains many objects and inside the objects are key value pairs 
+			//In the library Array 'author' would be the key and 'bill gates' would be the value for example
+		</script>
+
+	</body>
+	</html>

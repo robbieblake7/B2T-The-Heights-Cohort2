@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body onload="fruitsPush()">
+		<input type="button" value="click Me" onclick="
+			clickButton()">
+		<br>
+		<input id= "name" type = "text" onchange="displayName()">
+		<input type="button" value="Display Name" onclick="
+			displayName()">
+		<h4 id= "display"></h4>
+		<input type="button" value="add more fruit" onclick="
+			fruitsPush()">
+
+		<script type="text/javascript"> 
+			var fruits = ['apple', 'mango', 'banana']; 
+			function fruitsPush(){
+				fruits.push(prompt('Enter fruit').toLowerCase());
+				fruits.sort();
+				fruits.join()
+				document.getElementById('display').innerHTML =
+					fruits.join(' with '); 
+			}
+
+
+			function displayName(){
+				var name = document.getElementById('name').value;
+				document.getElementById('display').innerHTML = 
+					name; 
+			}
+
+			function clickButton(){
+					console.log('Oww that hurt');
+			}
+			sayHello('Trey', 54); 
+			sayHello('Jim', 89); 
+			sayHello('Sue', 14); 
+			sayHello(prompt('Enter Name'), prompt('Enter Age')); 
+
+			function sayHello(name, age){
+				//Name is only accessible inside a function 
+				console.log ('Hello' + name + ', you are' + age);
+			}
+
+			// sayHelloPt2(); Do use function expressions (read up on hoisting on JS)
+
+			var sayHelloPt2 = function (){ // Remember to execute this before line 18
+				console.log('Hello World');
+			}
+	</script>
+	</body>
+	</html>

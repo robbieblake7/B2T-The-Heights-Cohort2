@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Get all number from 1 to 100
+			//If number is divisible by 3 display Fizz
+			//If number is divisible by 5 display BUzz
+			//If number is divisible by 3 AND 5 display FizzBuzz 
+			//If none of the above display the number
+
+			var i = 1; 
+			while(i <= 100){ 
+				if(i%3 == 0 && i%5 == 0){
+					console.log('FizzBuzz'); 
+			}else if (i%5 == 0){
+					console.log('Buzz');
+			}else if (i%3 == 0){
+					console.log ('Fizz'); 
+			}else{
+					console.log(i);
+			}
+			i++; 
+			//Always increment after the code 	
+		}
+			//Find the sumation of all numbers in the array 
+			//make variable to hold sum of numbers
+			//Loop through the array to get every element 
+			//Add element onto x 
+			var nums = [10, 5, 82, 6, 7, 65, 12, 30, 17, 38, 45]
+				;
+
+			var x = 0; 
+			for(var i = 0; i < nums.length; i++){
+				x += nums [i]; //x = x + num[i]
+			}
+			// i has nothing to do with x 
+			console.log("The Total is" + x); 
+		</script>
+	</body>
+	</html>

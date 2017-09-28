@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title></title>
+			<style type="text/css">
+				th{
+					height:200px;
+					width: 200px;
+					font-size: 100px;
+				}
+			</style>
+		</head>
+		<body>
+			<table border="5">
+				<tr>
+					<th id="square0" onclick="clickSquare(this)"></th>
+					<th id="square1" onclick="clickSquare(this)"></th>
+					<th id="square2" onclick="clickSquare(this)"></th>
+				</tr>
+				<tr>
+					<th id="square3" onclick="clickSquare(this)"></th>
+					<th id="square4" onclick="clickSquare(this)"></th>
+					<th id="square5" onclick="clickSquare(this)"></th>
+				</tr>
+				<tr>
+					<th id="square6" onclick="clickSquare(this)"></th>
+					<th id="square7" onclick="clickSquare(this)"></th>
+					<th id="square8" onclick="clickSquare(this)"></th>
+				</tr>
+			</table>
+
+		<script type="text/javascript">
+			var board = [
+			'', '', '', 
+			'', '', '', 
+			'', '', '',
+			]
+			var player = 'X'
+
+			function clickSquare(square){
+				if(square.innerHTML == ''){
+
+				square.innerHTML = player; 
+			
+				//get last char of element's id 
+				var i = square.id.charAt(square.id.lenght-1);
+				board[i] = player; 
+
+				//changes value of player depending of its value
+				player = (player == 'X') ? 'O': 'X'; 
+				console.log(player); 
+				}
+				
+			}
+
+			function evalBoard(){
+				if(board[0] != '' && board[0] && board[1] && board[
+					0] == board[2]){
+					console.log('WINNER IS' + board[0]);
+				}else if(board[3] != '' && board[3] == board[4] &&
+					board[3] == board
+					[5]){
+					console.log('WIN IS' + board[3]); 
+				}
+			}
+		</script>
+	</body>
+</html>
