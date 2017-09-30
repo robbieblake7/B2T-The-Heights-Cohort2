@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jameel's Calc</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        // Create two num varialbles to get the user input and the distinguish them from one to the other 
+        // Create a sign variable to get th suer input of a sign and be able to use it for the operation 
+        var num1 = '';
+        var num2 = '';
+        var sign = '';
+            function pressNumber(numberVal) {
+                //var numValue = numberVal.value;
+                //console.log(numValue);
+                //Checking for a bottom press if num1 is empty the press will go into num1, if not then into num2 
+
+                if(sign == ''){
+                    num1 += numberVal.value;
+                    console.log("num1 is " + num1);
+                }else{`
+                    num2 += numberVal.value;
+                    console.log("num2 is " + num2);
+                }
+            }
+            function calOperations(signVal) {
+                //var signValue = signVal.value;
+                //console.log(signValue);
+                // Check if the num1 value is assigned to be able to use and operation operator 
+                if(num1 != 0 && num2 != 0){
+                    getResults(document.getElementById('equals'));
+                    sign = signVal.value;
+                }else if(num1 != 0){
+                    sign = signVal.value;
+                }else{
+                    sign = sign;
+                }
+            }
+            //Checking 'if' the user gave the two numbers above and getting the results of the operation 
+            //Make the result and make it num1 and reset the sign and number2 values 
+
+            function getResults(equal) {
+                switch (sign) {
+                    case '+':
+                        var result = (parseInt(num1) + parseInt(num2));
+                        console.log(result);
+                        sign = '';
+                        num1 = result;
+                        num2 = '';
+                        break;
+                    case '-':
+                        var result = (parseInt(num1) - parseInt(num2))
+                        console.log(result);
+                        sign = '';
+                        num1 = result;
+                        num2 = '';
+                        break;
+                    case '*':
+                        var result = parseInt(num1) * parseInt(num2);
+                        console.log(result);
+                        sign = '';
+                        num1 = result;
+                        num2 = '';
+                        break;
+                    case '/':
+                        var result = parseInt(num1) / parseInt(num2);
+                        console.log(result);
+                        sign = '';
+                        num1 = result;
+                        num2 = '';
+                        break;
+                }
+            }
+        </script>
+        <table>
+            <tr>
+                <th id="display"><th>
+            </tr>
+            <tr>
+                <th id="number1"><input type="button" value="1" onclick="pressNumber(this)"></th>
+                <th id="number2"><input type="button" value="2" onclick="pressNumber(this)"></th>
+                <th id="number3"><input type="button" value="3" onclick="pressNumber(this)"></th>
+                <th id="plus"><input type="button" value="+" onclick="calOperations(this)"></th>
+            </tr>
+            <tr>
+                <th id="number4"><input type="button" value="4" onclick="pressNumber(this)"></th>
+                <th id="number5"><input type="button" value="5" onclick="pressNumber(this)"></th>
+                <th id="number6"><input type="button" value="6" onclick="pressNumber(this)"></th>
+                <th id="minus"><input type="button" value="-" onclick="calOperations(this)"></th>
+            </tr>
+            <tr>
+                <th id="number7"><input type="button" value="7" onclick="pressNumber(this)"></th>
+                <th id="number8"><input type="button" value="8" onclick="pressNumber(this)"></th>
+                <th id="number9"><input type="button" value="9" onclick="pressNumber(this)"></th>
+                <th id="multiply"><input type="button" value="*" onclick="calOperations(this)"></th>
+            </tr>
+            <tr>
+                <th id="number0"><input type="button" value="0" onclick="pressNumber(this)"></th>
+                <th id="cButton"><input type="button" value="C" onclick="pressNumber(this)"></th>
+                <th id="equals"><input type="button" value="=" onclick="getResults(this)"></th>
+                <th id="divide"><input type="button" value="/" onclick="calOperations(this)"></th>
+            </tr>
+        </table>
+    </body>
+</html>

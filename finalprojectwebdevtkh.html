@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>Blakes Calculator</title>
+		</head>
+		<body>
+			<script type="text/javascript">
+				function pressNumber(numberVal){
+					var numValue = numberVal.value; 
+					console.log(numValue); 
+					var num1 = 0; 
+					var num2 = 0;
+					if(num1 == 0){
+						num1 = numValue;
+					}else if(num2 == 0){
+						num2 = numVal + 1; 
+					}
+					console.log(num1)
+					console.log(num2)
+				}
+				function calOperations(signVal){
+					var signValue = signVal.value; 
+					console.log(signValue);
+				}
+
+			</script>
+			<table>
+				<tr>
+					<th id="display"></th>
+				</tr>
+				<tr>
+					<th id= "number1"><input type="button" value="1" onclick="pressNumber(this)"></th>
+					<th id= "number2"><input type="button" value="2" onclick="pressNumber(this)"></th>
+					<th id= "number3"><input type="button" value="3" onclick="pressNumber(this)"></th>
+					<th id= "plus"><input type="button" value="+"  onclick="calOperations(this)"></th>
+				</tr>
+				<tr>
+					<th id= "number4"><input type="button" value="4" onclick="pressNumber(this)"></th>
+					<th id= "number5"><input type="button" value="5" onclick="pressNumber(this)"></th>
+					<th id= "number6"><input type="button" value="6" onclick="pressNumber(this)"></th>
+					<th id= "minus"><input type="button" value="-" onclick="calOperations(this)"></th>
+				</tr>
+				<tr>
+					<th id= "number7"><input type="button" value="7" onclick="pressNumber(this)"></th>
+					<th id= "number8"><input type="button" value="8" onclick="pressNumber(this)"></th>
+					<th id= "number9"><input type="button" value="9" onclick="pressNumber(this)"></th>
+					<th id= "multiply"><input type="button" value="*" onclick="calOperations(this)"></th>
+				</tr>
+				<tr>
+					<th id= "number0T"><input type="button" value="0" onclick="pressNumber(this)"></th>
+					<th id= "cButton"><input type="button" value="c" onclick="pressNumber(this)"></th>
+					<th id= "equals"><input type="button" value="=" onclick="calOperations(this)"></th>
+					<th id= "divide"><input type="button" value="/" onclick="calOperations(this)"></th>
+				</tr>
+
+			</table>
+
+		</body>
+</html>
