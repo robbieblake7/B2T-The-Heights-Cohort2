@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays and DOM</title>
+    </head>
+    <body>
+        <h1 id="myFruit"></h1>
+        <script type="text/javascript">
+            //Started my fruits array
+            var fruits = ["apple", "orange", "kiwi"];
+            var newFruit = prompt("Add more fruit:");
+            /*Used toLowerCase() becuase if the string from the prompt starts
+            with a capitalized letter the sorting will not work correct*/
+            fruits.push(newFruit.toLowerCase());
+            console.log(fruits);
+            //Sort the fruits in alphabetical order and concatenating them
+            var sortedFruits = fruits.sort();
+            var show = sortedFruits.join(" with ");
+            //Print the fruit order to an h1
+            document.getElementById("myFruit").innerHTML = show;
+        </script>
+    </body>
+</html>
