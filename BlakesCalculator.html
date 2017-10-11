@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Blake Calculator</title> 
+
+		<h1>BLAKES COCONATOR</h1>
+
+		<style>
+			body {
+			background: url("https://preview.ibb.co/dvpRtw/bentley_gt_continental_car_machine_grey_road_motion_speed_tunnel_restriction_bentley_ji_ti_continental.jpg");
+			background-size: cover ;
+			background-position: 85% 1%
+
+		} 
+		#CalculatorBody{
+			background: black;
+			position: relative;
+			width: 260px;
+			border: 4px solid grey;
+			border-radius: 4px;
+
+		}
+		input[type="button"] {
+			background: lightGray;
+			width: 18%;
+			font-size: 20px; 
+			font-weight: 900;
+			margin: 2%;
+			border-radius: 4px;
+
+		}
+		input[type="text"] {
+			position: relative;
+			display: block; 
+			width: 90%;
+			margin: 5px auto;
+			font-size: 20px;
+			
+		}
+			
+
+		</style>
+	</head>
+
+
+	<body>
+	<center><br>
+		<div id="CalculatorBody">
+			<form name="calculator">
+				<input type="text" name="answer">
+				<br>
+
+				<input type="button" value=" 1 " onclick="calculator.answer.value += &#39;1&#39;">
+				<input type="button" value=" 2 " onclick="calculator.answer.value += &#39;2&#39;">
+				<input type="button" value=" 3 " onclick="calculator.answer.value += &#39;3&#39;">
+				<input type="button" value=" + " onclick="calculator.answer.value += &#39;+&#39;">
+				<br>
+				
+
+				<input type="button" value=" 4 " onclick="calculator.answer.value += &#39;4&#39;">
+				<input type="button" value=" 5 " onclick="calculator.answer.value += &#39;5&#39;">
+				<input type="button" value=" 6 " onclick="calculator.answer.value += &#39;6&#39;">
+				<input type="button" value=" - " onclick="calculator.answer.value += &#39;-&#39;">
+				<br>
+
+				<input type="button" value=" 7 " onclick="calculator.answer.value += &#39;7&#39;">
+				<input type="button" value=" 8 " onclick="calculator.answer.value += &#39;8&#39;">
+				<input type="button" value=" 9 " onclick="calculator.answer.value += &#39;9&#39;">
+				<input type="button" value=" x " onclick="calculator.answer.value += &#39;*&#39;">
+				<br>
+
+				<input type="button" value=" c " onclick="calculator.answer.value = &#39;&#39;">
+				<input type="button" value=" 0 " onclick="calculator.answer.value += &#39;0&#39;">
+				<input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)">
+				<input type="button" value=" / " onclick="calculator.answer.value += &#39;/&#39;">
+				<br>
+
+			</form>
+			
+		</div>
+
+	
+</body></html>
